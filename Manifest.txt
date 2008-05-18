@@ -1,0 +1,7 @@
+History.txt
+Manifest.txt
+README.txt
+Rakefile
+bin/quips
+lib/quips.rb
+test/test_quips.rb
