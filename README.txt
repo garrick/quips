@@ -9,15 +9,15 @@ to the console for you applications
 
 == FEATURES/PROBLEMS:
 
-* None yet.  Initial Gem 'sow' check in.
+* Basic core unit functionality.  Need to fix file reading.
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+  Basic functionality there.  Still fighting with file resolution.
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+* flexmock required to build
 
 == INSTALL:
 

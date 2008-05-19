@@ -1,0 +1,12 @@
+quips:
+  - quip: "some fun stuff here"
+  - quip: "ruby stuff here"
+    topics: [ruby]
+  - quip: "java stuff here"
+    topics: [java]
+  - quip: "Go f*&k yourself. -Dick Cheny, Unitied States Vice President"
+    topics: [rude]
+  - quip: "I can has YAML"
+    topics: [intarweb]
+  - quip: "You've been Rick Rolled!"
+    topics: [rude, intarweb]
