@@ -11,14 +11,21 @@ class TestQuips < Test::Unit::TestCase
 
   def test_load_quip_file_with_no_args_loads_default
    mock_yaml = flexmock(YAML)
-   mock_yaml.should_receive(:load_file).once.with("default_quips.yml")
+   mock_yaml.should_receive(:load_file).once.with(/.*default_quips.yml/)
    @unit.load_quip_file
   end
 
   def test_load_quip_file_with_specific_file
    mock_yaml = flexmock(YAML)
-   mock_yaml.should_receive(:load_file).once.with("my_special_quips.yml")
+   mock_yaml.should_receive(:load_file).once.with(/.*my_special_quips.yml/)
    @unit.load_quip_file "my_special_quips.yml"
+  end
+
+  def test_locate_yaml_file
+    some_path = "/some/fake/path/with/quips.rb"
+    some_file = "some_quips.yml"
+    expected =  "/some/fake/path/with/./../data/some_quips.yml"
+    assert_equal expected, @unit.locate_yaml_file(some_path, some_file)
   end
 
   def test_parse_quips
@@ -54,7 +61,7 @@ class TestQuips < Test::Unit::TestCase
 
   def set_quip_storage_and_topic_arrays
    sample_quip_hash = Hash.new
-   sample_quip_hash[:quips] = build_standard_sample_quips
+   sample_quip_hash["quips"] = build_standard_sample_quips
    @unit.parse_quips sample_quip_hash 
   end
 

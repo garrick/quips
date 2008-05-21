@@ -1,11 +1,12 @@
 require 'yaml'
 
 class Quips
-  VERSION = '1.0.0'
+  VERSION = '1.0.1'
 
   def Quips.create_default_quips
     quipper = Quips.new
     quipper.parse_quips quipper.load_quip_file
+    return quipper
   end
 
   def any_quip
@@ -19,15 +20,19 @@ class Quips
   end
 
   def load_quip_file(file_name = "default_quips.yml")
-    fname = __FILE__ + "/../data/" + file_name
-    YAML.load_file(file_name)
+    YAML.load_file(locate_yaml_file(File.expand_path(__FILE__), file_name))
+  end
+
+  def locate_yaml_file directory, file_name
+    dir = directory.gsub("quips.rb","")
+    fname = dir+"./../data/" + file_name
   end
 
   def parse_quips quip_hash
     @quip_storage = Array.new
     @topic_arrays = Hash.new
     quip_id = 0
-    quip_hash[:quips].each do |quip_entry |
+    quip_hash["quips"].each do |quip_entry |
       text = quip_entry["quip"]
       topics = quip_entry["topics"]
       @quip_storage << text

@@ -4,3 +4,10 @@
 
   * Birthday!
 
+=== 1.0.1 / 2008-05-20
+
+* 3 major enhancements
+
+  * Working install Gem
+  * Correct file loading
+  * Command line bin util

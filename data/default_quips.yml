@@ -1,12 +1,22 @@
 quips:
-  - quip: "some fun stuff here"
-  - quip: "ruby stuff here"
-    topics: [ruby]
-  - quip: "java stuff here"
-    topics: [java]
+  - quip: "Remember: No matter where you go... there you are. --Buckaroo Banzai"
+  - quip: "Ruby is simple in appearance, but is very complex inside, just like our human body. --matz."
+    topics: [ruby, programming]
+  - quip: "Java is the SUV of programming tools. (Philip Greenspun)"
+    topics: [java, programming]
   - quip: "Go f*&k yourself. -Dick Cheny, Unitied States Vice President"
     topics: [rude]
   - quip: "I can has YAML"
     topics: [intarweb]
   - quip: "You've been Rick Rolled!"
     topics: [rude, intarweb]
+  - quip: "If you want to shoot yourself in the foot, Perl will give you ten bullets and a laser scope, then stand by and cheer you on. (Teodor Zlatanov)"
+    topics: [perl, programming]
+  - quip:"Actually, I'm trying to make Ruby natural, not simple. (Yukihiro 'Matz' Matsumoto) "
+    topics: [ruby, programming]
+  - quip: "Claiming Java is easier than C++ is like saying that K2 is shorter than Everest. (Larry O'Brien)"
+    topics: [java, programming]
+#  - quip:
+#    topics: [java]
+#  - quip:
+#    topics: [java]

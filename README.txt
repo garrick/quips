@@ -9,11 +9,24 @@ to the console for you applications
 
 == FEATURES/PROBLEMS:
 
-* Basic core unit functionality.  Need to fix file reading.
+* Feature complete.  Includes Gem install support
 
 == SYNOPSIS:
 
-  Basic functionality there.  Still fighting with file resolution.
+  From command line:
+     quips
+     quips --help
+     quips programming
+
+  require 'rubygems'
+  require 'quips'
+
+  quipper = Quips.create_default_quips
+  pithy_saying = quipper.any_quip  #Get any quip
+  pithy_topical_saying = quipper.quip_for "topic" #see data file 
+
+  The YAML data file is installed with the Gem wich is straight forward
+  to follow.  Season to taste with your own content and quip away.
 
 == REQUIREMENTS:
 

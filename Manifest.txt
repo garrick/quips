@@ -5,3 +5,4 @@ Rakefile
 bin/quips
 lib/quips.rb
 test/test_quips.rb
+data/default_quips.yml

@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'quips'
+quipper = Quips.create_default_quips
+if ARGV[0].nil?
+puts quipper.any_quip
+elsif not quipper.all_topics[ARGV[0]].nil?
+puts quipper.quip_for(ARGV[0])
+else
+puts "Your valid topics are:"
+quipper.all_topics.keys.each {|x| puts "\t " + x }
+end
